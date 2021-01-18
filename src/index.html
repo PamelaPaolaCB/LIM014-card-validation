@@ -4,10 +4,38 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <section class="pantalla-tres">
+        <div class="container-pantalla-tres">
+           <div class="presentacion_curso">
+             <h1>Bienvenidos al curso de Python</h1>
+             <img src="img/gif-3.gif">
+           </div>
+           <div class="compra">
+            <h1> Detalle de la compra </h1>
+            <div id="tarjeta_nom">
+              <label>Nombre de tarjeta de crédito</label></br>
+              <input type="text" size="50" id="txtName" placeholder="Ingrese su tarjeta:">
+          </div>
+          
+          <div id="tarjeta_num">
+              <label>Número de tarjeta de crédito</label></br>
+              <input type="text" size="50" id="txtNum" placeholder="Ingrese su tarjeta:">
+          </div>
+
+          <div id="tarjeta_exp">
+              <label>Fecha de expiración de la tarjeta de crédito</label></br>
+              <input type="text" size="50" id="txtName">
+          </div>
+             <button onclick="capturar();"> Enviar pago </button>
+           </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
