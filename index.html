@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="style.css" /> <!-- Redirijo mi diseño al CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <main>     
+      
+      <!-- Pantalla Uno -->
+     <section id="pantallaUno" class="pantalla-uno">
+  <div class="container-pantalla-uno"> 
+  <div id="pantalla-1" class= "pantalla1">
+      <h1 id="fuente">Bienvenidos a Py-Tech </h1>
+          <h2>¿Cuál es tu nombre?</h2>
+          <input type="text" id="nombre" style="
+          width: 200px;
+          height: 30px;
+          ">    
+  <button id="botonIngresar" >Ingresar</button>     
+  </div>
+  <div>
+      <img src="img/ima1.gif" width="400" height="400">
+  </div>
+</div>
+     </section>
+     <section class="pantalla-dos" id="pantallaDos">
+      <div class="pantalla2">
+      <h1 id="nombreUsuario"></h1>
+      <h2>Estos son los cursos que se dictan: </h2>
+      <button id="botonPython" class="main-button">Python</button>
+      <button id="botonJS" class="main-button">Javascript</button>
+      <button id="botonSpark" class="main-button">Spark</button>
+      </div>
+     </section>
+      <section class="pantalla-tres" id="pantallaTres">
+        <div class="logo">
+          <img src="img/py.JPG">
+        </div>
+        <div class="container-pantalla-tres">
+           <div class="presentacion_curso">
+             <h1 id="welcome"></h1>
+             <img src="img/curso.gif">
+           </div>
+           <div class="compra">
+            <h1> Detalle de la Tarjeta de Crédito </h1>
+            <div class="" id="tarjeta_nom">
+              <label>Nombre </label><br>
+              <input type="text" size="50" id="txtName" placeholder="Ingrese su nombre">
+          </div>
+          
+          <div id="tarjeta_num">
+              <label>Número de tarjeta</label><br>
+              <input type="text" size="50" id="txtNum" placeholder="Ingrese su número de tarjeta:">
+          </div>
+          <div id="tarjeta_exp">
+              <label>Fecha de expiración de la tarjeta</label><br>
+              <input type="date" size="50" id="txtDate">
+          </div>
+             <input type="button" id="capturar" value="Enviar pago" class="button">
+           </div>
+        </div>
+      </section>
+      
+    </main>
+    <footer></footer>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
