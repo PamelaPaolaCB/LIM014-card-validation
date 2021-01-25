@@ -1,9 +1,54 @@
-# Tarjeta de crédito válida
+# TARJETA DE CRÉDITO VÁLIDA
+
+El proyecto de generación de tarjeta de crédito válidas, 
+yace en la necesidad del operador de comprobar la autenticidad de
+la tarjeta, esto ayuda a solucionar muchas dudas que se pueden tener 
+de legitimidad de una determinada compañia de la tarjeta de crédito,
+tanto para las compañías, paginas donde se realizan diferentes compras 
+online, y más fines personales.
+
+## Definición del producto
+
+* La población objetivo (principales usuarios), son las personas que desean comprar los 
+cursos de Python, Javascript y Spark.
+* El fin es que la compra sea personalizada, de esta manera crear 
+un ambiente de confiabilidad para el cliente.
+* La página solo permite realizar la compra de los cursos a los usuarios
+cuya tarjeta de crédito sea autenticada.
+
+***
+## Diseño del prototipo de baja fidelidad
+** Primer prototipo **
+![prototipo](https://user-images.githubusercontent.com/60514118/105570393-25847200-5d17-11eb-97d6-16648d0b6941.jpeg)
+
+Feedback:
++ Añadir placeholders.
++ Agregar modal para mostrar si la tarjeta es valida o inválida y 
+eliminar las últimas dos pantallas.
++ El detalle de la tarjeta deberia de estar en lamparte izquierda de la pantalla.
+
+** Prototipo con mejoras **
++ Pantalla 1
+Se procede a ingresar el nombre del cliente, de esta manera se hace un servicio personalizado.
+![pantalla1](https://user-images.githubusercontent.com/60514118/105570616-806a9900-5d18-11eb-8f38-9b1dbd0e9c58.JPG)
+
++ Pantalla 2
+Se recibe el nombre del cliente y se le presentan los diferentes cursos que ofertan.
+![pantalla2](https://user-images.githubusercontent.com/60514118/105570623-895b6a80-5d18-11eb-8523-ced51d328021.JPG)
+
++ Pantalla 3
+Se hace el proceso de la compra, mediante el cuál se procede con la validación de la tarjeta, 
+para una compra óptima.
+![pantalla3](https://user-images.githubusercontent.com/60514118/105570626-8b252e00-5d18-11eb-8d30-7f696f077821.JPG)
+
+
+***
+
 
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [2. Instrucciones para el uso](#2-instrucciones-para-el-uso)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -13,7 +58,8 @@
 
 ## 1. Preámbulo
 
-El [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
+La lógica detrás de la validación de la tarjeta de crédito se remonta al hecho estructurado 
+del [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
 también llamado algoritmo de módulo 10, es un método de suma de verificación,
 se utiliza para validar números de identificación; tales como el IMEI de los
 celulares, tarjetas de crédito, etc.
@@ -22,26 +68,22 @@ Este algoritmo es simple. Obtenemos la reversa del número a verificar (que
 solamente contiene dígitos [0-9]); a todos los números que ocupan una posición
 par se les debe multiplicar por dos, si este número es mayor o igual a 10,
 debemos sumar los dígitos del resultado; el número a verificar será válido si
-la suma de sus dígitos finales es un múltiplo de 10.
+la suma de sus dígitos finales de es un múltiplo de 10. 
 
 ![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
 
-## 2. Resumen del proyecto
+## 2. Instrucciones para el uso
 
-En este proyecto tendrás que construir una aplicación web que le permita a un
-usuario validar el número de una tarjeta de crédito. Además, tendrás que
-implementar funcionalidad para ocultar todos los dígitos de una tarjeta menos
-los últimos cuatro.
+La aplicación consta en total de 3 pantallas, la primera solo hace la presentación de la 
+empresa que vende los cursos y en la cual se debe dejar el nombre del cliente,
+en la segunda pantalla se muestran los cursos ofertados, y en la tercera pantalla, procediendo con la 
+estructura de una compra adecuada, se procede a validar la tarjeta de crédito, y en la pnatalla emergente 
+se observará si la compra fue exitosa o si la tarjeta resulta invalida para la compra, y no se mostrará los
+ultimos cuatro dígitos.
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría validar una tarjeta de crédito y pensar en cómo debe ser esa
-experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?)
-etc.
 
 ## 3. Objetivos de aprendizaje
-
-Trabajando en parejas aprenderán a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
+Construir una aplicación web que interactuará con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
 como tecnologías.
 
 ### HTML y CSS
@@ -49,6 +91,7 @@ como tecnologías.
 * [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
 * [ ] Uso de selectores de CSS.
 * [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+
 
 ### DOM
 
@@ -97,15 +140,6 @@ como tecnologías.
 
 Usa solo caracteres numéricos (dígitos) en la tarjeta a validar [0-9].
 
-### Definición del producto
-
-En el `README.md`, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
-
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
-
 ### Interfaz de usuario (UI)
 
 La interfaz debe permitir al usuario:
@@ -115,63 +149,6 @@ La interfaz debe permitir al usuario:
 * Ocultar todos los dígitos de su número de tarjeta menos los últimos
 4 caracteres.
 * No debe poder ingresar un campo vacío.
-
-### UX (Diseño de experiencia de usuario)
-
-Antes de iniciar a codear, debes entender el problema que quieres solucionar y
-cómo tu aplicación lo soluciona.
-
-* Trabaja tu primer prototipo con papel y lápiz (blanco y negro).
-* Luego valida esta solución con una compañera (pedir feedback).
-* Toma lo aprendido al momento de validar tu primer prototipo y desarrolla un
-  nuevo prototipo usando alguna herramienta para diseño de prototipos
-  ([Balsamiq](https://balsamiq.com/), [Figma](https://www.figma.com/),
-  [Google Slides](https://www.google.com/intl/es/slides/about/), etc.)
-Estos puntos los presentarás en el `README.md`.
-
-### Scripts / Archivos
-
-#### General
-
-##### `README.md`
-
-Debe contener lo siguiente:
-
-* Un título con el nombre de tu proyecto.
-* Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
-* La imagen final de tu proyecto.
-* Investigación UX:
-  1. Explicar quiénes son los usuarios y los objetivos en relación con el
-    producto.
-  2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
-    usuarios.
-  3. Luego colocarás la foto de tu primer prototipo en papel.
-  4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
-  5. Imagen del prototipo final.
-
-#### Visualmente (HTML y CSS)
-
-Deberás maquetar de forma exacta el prototipo final que hiciste en la herramienta
-de diseño de prototipos que escogiste utilizando HTML y CSS. En este momento elegirás
-los colores, tipo de fuente, etc a usar.
-
-A continuación describimos los archivos que utilizarás:
-
-##### `src/index.html`
-
-En este archivo va el contenido que se mostrará al usuario (esqueleto HTML).
-Encontrarás 3 etiquetas iniciales, las cuales si deseas puedes borrar y empezar
-de cero:
-
-* `<header>`: encabezado de tu proyecto.
-* `<main>`: contenido principal de tu proyecto.
-* `<footer>`: pie de página de tu proyecto.
-
-##### `src/style.css`
-
-Este archivo debe contener las reglas de estilo. Queremos que escribas tus
-propias reglas, por eso NO está permitido el uso de frameworks de CSS
-(Bootstrap, materialize, etc).
 
 #### Funcionalmente (JavaScript - pruebas unitarias)
 
@@ -263,6 +240,7 @@ mínimo del 50% de _branches_ (ramas).
    `npm start` para arrancar el servidor web y dirígete a
    `http://localhost:5000` en tu navegador.
 8. A codear se ha dicho! :rocket:
+
 
 ### Recursos y temas relacionados
 
