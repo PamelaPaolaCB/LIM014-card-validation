@@ -16,6 +16,8 @@ un ambiente de confiabilidad para el cliente.
 * La página solo permite realizar la compra de los cursos a los usuarios
 cuya tarjeta de crédito sea autenticada.
 
+[Página  👉 terminada](https://pamelapaolacb.github.io/LIM014-data-lovers/src)
+
 ***
 ## Diseño del prototipo de baja fidelidad
 ** Primer prototipo **
